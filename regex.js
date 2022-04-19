@@ -23,5 +23,19 @@ let str7 = /hu./gi;
 // let result = str1.match(str4);
 // let result = str1.match(str5);
 // let result = str1.match(str6);
-let result = str1.match(str7);
-console.log(result);
+// let result = str1.match(str7);
+// console.log(result);
+
+//Greedy matching
+// let titanic = "titanic";
+// let reg = /t[a-z]*i/;//Greedy
+// console.log(titanic.match(reg));
+
+//Lazy matching
+let titanic = "titanic";
+let reg = /t[a-z]*?i/; //Lazy
+console.log(titanic.match(reg));
+
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<h*?[0-9]>/; // Change this line
+console.log(text.match(myRegex));
