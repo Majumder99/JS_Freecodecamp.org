@@ -34,8 +34,23 @@ let str7 = /hu./gi;
 //Lazy matching
 let titanic = "titanic";
 let reg = /t[a-z]*?i/; //Lazy
-console.log(titanic.match(reg));
+// console.log(titanic.match(reg));
 
 let text = "<h1>Winter is coming</h1>";
 let myRegex = /<h*?[0-9]>/; // Change this line
-console.log(text.match(myRegex));
+// console.log(text.match(myRegex));
+
+//Whitespace checker using \s
+let white = "There is many white space space";
+let myWhite = /\s/g;
+// console.log(white.match(myWhite));
+
+//Lower number and upper number {lower,upper} or using specifying digit {4}
+let hz = "hazzzzzah";
+let myHz = /haz{5}ah/;
+// console.log(myHz.test(hz));
+
+// Lookahead => positive (?=...) + negative (?!...)
+let pass = "lsk333";
+let myPass = /(?=\w{6})(?=\D*\d{2})/;
+console.log(myPass.test(pass));
