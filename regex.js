@@ -53,4 +53,26 @@ let myHz = /haz{5}ah/;
 // Lookahead => positive (?=...) + negative (?!...)
 let pass = "lsk333";
 let myPass = /(?=\w{6})(?=\D*\d{2})/;
-console.log(myPass.test(pass));
+// console.log(myPass.test(pass));
+
+//Capture groups
+// let repeatStr = "row row row row your boat";
+let repeatStr = "42 42 42";
+// let repeatRegex = /(\w+) \1 \1/;
+let repeatRegex = /^(\d+) \1 \1$/;
+// console.log(repeatRegex.test(repeatStr)); // Returns true
+// console.log(repeatStr.match(repeatRegex)); // Returns ["row row row", "row"]
+
+let str = "one two three";
+let fixRegex = /(\w+)(\s)(\w+)(\s)(\w+)/; // Change this line
+let replaceText = "$5 $3 $1"; // Change this line
+// let result = str.replace(fsixRegex, replaceText);
+// console.log(result);
+
+//Remove whitespace
+let hello = "   Hello, World!  ";
+// let wsRegex = /(\w+),(\s)(\w+)!/; // Change this line
+// let result = hello.match(wsRegex); // Change this line
+let wsRegex = /^\s+|\s+$/g;
+let result = hello.replace(wsRegex, "");
+console.log(result);
